@@ -270,6 +270,7 @@ class Arena extends PlayerHandler {
 	}
 
 	public function leaveArena(Player $p, $kicked = false){
+		$p->transfer("play.zectorpe.ml", "19132");
 		$sound = new EndermanTeleportSound(new Vector3());
 		if($this->getPlayerMode($p) == 0){
 			if($this->inAcceptedMode() or $kicked){
